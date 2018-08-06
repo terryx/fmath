@@ -1,5 +1,5 @@
 {
-  "name": "fmath",
+  "name": "@terryx/fmath",
   "version": "1.0.0",
   "description": "",
   "main": "libs/index.js",
