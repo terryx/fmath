@@ -1,0 +1,27 @@
+{
+  "name": "fmath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "libs/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terryx/fmath.git"
+  },
+  "keywords": [
+    "finance",
+    "math"
+  ],
+  "author": "Terry Yuen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/terryx/fmath/issues"
+  },
+  "homepage": "https://github.com/terryx/fmath#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "standard": "^11.0.1"
+  }
+}
