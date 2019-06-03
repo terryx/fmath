@@ -3,7 +3,8 @@
   "version": "1.1.0",
   "main": "libs/index.js",
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "build": "tsc --build"
   },
   "repository": {
     "type": "git",
