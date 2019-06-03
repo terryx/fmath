@@ -1,8 +1,15 @@
-const test = require('ava')
-const { percent } = require('../libs/index')
+import test from 'ava'
+import { PercentageCalculator as Pc } from '../src/index'
 
-test('get original value after certain percentage', t => {
-  t.is(percent.origin({ base: 1000, percent: -10 }), 900)
-  t.is(percent.origin({ base: 1000, percent: 0 }), 1000)
-  t.is(percent.origin({ base: 1000, percent: 10 }), 1100)
+test('calculate increase/decrease of 2 values', t => {
+    t.is(Pc.difference(11154.35, 11170.43), 0.14)
+    t.is(Pc.difference('11154.35', '11170.43'), 0.14)
+    t.is(Pc.difference(11170.43, 11154.35), -0.14)
+    t.is(Pc.difference('11170.43', '11154.35'), -0.14)
+})
+
+test('calculate original value given a percent value', t => {
+    t.is(Pc.origin(1000, -10), 900)
+    t.is(Pc.origin(1000, 0), 1000)
+    t.is(Pc.origin(1000, 10), 1100)
 })

@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/terryx/fmath#readme",
   "devDependencies": {
-    "ava": "^0.25.0",
-    "standard": "^11.0.1"
+    "ava": "^2.0.0",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
   },
   "directories": {
     "test": "tests"

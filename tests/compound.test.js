@@ -1,15 +1,15 @@
 const test = require('ava')
-const { compound } = require('../libs/index')
+import { CompoundCalculator as cc } from '../src'
 
 test('compound value by interest over period', t => {
-  t.is(compound.get({ base: 0, percent: 5, period: 20 }), 0)
+    t.is(cc.simple(0, 20, 0), 0)
 
-  // 200 with 5 percent gain over 20 years
-  t.is(compound.get({ base: 200, percent: 5, period: 20 }), 530.6595410288845)
+    // 200 with 5 percent gain over 20 years
+    t.is(cc.simple(200, 20, 5), 530.66)
 
-  // 500 with 5 percent gain over 54 weeks
-  t.is(compound.get({ base: 500, percent: 5, period: 54 }), 6969.348055416141)
+    // 500 with 5 percent gain over 54 weeks
+    t.is(cc.simple(500, 54, 5), 6969.35)
 
-  // 6000 with 5 percent gain over 10 years
-  t.is(compound.get({ base: 6000, percent: 7, period: 10 }), 11802.908143737397)
+    // 6000 with 5 percent gain over 10 years
+    t.is(cc.simple(6000, 10, 7), 11802.91)
 })
